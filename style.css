@@ -1,3 +1,30 @@
-div {
-    background: fuchsia;
+h1{
+    display: flex;
+    flex: 1;
+    border: 1px black solid;
+    width: 25%;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+nav{
+    flex: 1;
+    border: 1px black solid;
+    width: 33%;
+    height: 33%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+section{
+    flex: 1;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    width: 30%;
+    height: 30%;
+    flex-direction: row;
+
+}
+
+nav, section{
+    display: inline-block;
 }
