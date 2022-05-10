@@ -10,32 +10,27 @@
 </head>
 <body>
     <div>
-        <h1>Excuse Categories</h1>
-        <button id="family-button">Family Button</button>
-        <button id="office-button">Office Button</button>
-        <button id="children-button">Children Button</button>
-        <button id="college-button">College Button</button>
-        <button id="party-button">Party Button</button>
-        <ul></ul>
+        <h1>Excuses</h1>
+        <button id="family-button">Family</button>
+        <button id="office-button">Office</button>
+        <button id="children-button">Children</button>
+        <button id="college-button">College</button>
+        <button id="party-button">Party</button>
+        <ul id="new-excuse"></ul>
     </div>
     <div>
-        <form id=“new-excuse-form”>
+        <form id=“new_excuse_form”>
             <label for=“dropDownPriority”>Choose Category:</label>
             <br>
             <select name=“Priority” id=“dropDownPriority”>
-                <option value=“family”>Family</option>
-                <option value="office">Office</option>
-                <option value=“children”>Children</option>
-                <option value="college">College</option>
-                <option value="party">Party</option>
+                <option id="family-option" value=“Family”>Family</option>
+                <option id="office-option" value="office">Office</option>
+                <option id="children-option" value=“children”>Children</option>
+                <option id="college-option" value="college">College</option>
+                <option id="party-option" value="party">Party</option>
             </select><br>
-            <input id="new-excuse-text" type="text" placeholder="new excuse"></input><br>
-            <button>Submit new excuse</button><br>
-                <!-- <form id=“create-task-form” action = “#” method = “POST”>
-                    <label for=“new-task-description”>Enter Additional Served Documents</label>
-                    <input type=“text” name=“new-task-description” id=“new-task-description”> -->
-                   
-                  </form>
+            <input id="new-excuse-text" type="text" name="new excuse"></input><br>
+            <button id="submit-excuse">Submit new excuse</button><br>
         </form>    
     </div>
 </body>

@@ -4,6 +4,23 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(excuses => {
         addButtonListeners(excuses);
     });
+
+    const excuseForm = document.querySelector("form");
+    excuseForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        const familyOption = document.querySelector("#family-option").textContent;
+    
+        if (familyOption === "Family") {
+            const li = document.createElement("li");
+            li.textContent = document.getElementById("new-excuse-text").value;
+
+            document.querySelector("#new-excuse").append(li);
+        }
+        e.target.reset();
+
+    })
+
 });
 
 function addExcusesByCategory(excuses, category) {
@@ -46,3 +63,18 @@ function addButtonListeners(excuses) {
         addExcusesByCategory(excuses, "party");
     });
 }
+
+
+
+
+
+
+// const excuseForm = document.getElementById('submit-excuse');
+// excuseForm.addEventListener('submit', (e) => submitNewExcuse(e));
+// function submitNewExcuse(e){
+//     e.preventDefault();
+//     const li = document.createElement('li');
+//     const newExcuseList = document.getElementById('new-excuse');
+//     newExcuseList.appendChild(li);
+//     li.textContent = e.target.excuse.value;
+// }
