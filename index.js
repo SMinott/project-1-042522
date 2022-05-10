@@ -1,16 +1,18 @@
 let customExcuse = null;
-let newLi = null;
+let customCategory = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://excuser.herokuapp.com/v1/excuse/300`)
     .then(resp => resp.json())
     .then(excuses => {
+        customExcuseArray = excuses;
         addButtonListeners(excuses);
     });
 });
 
 function addExcusesByCategory(excuses, category) {
     document.querySelector("ul").textContent = "";
+    
     let filteredExcuses = excuses.filter((excuse) => {
         return excuse.category === category;
     });
@@ -20,11 +22,12 @@ function addExcusesByCategory(excuses, category) {
         li.textContent = obj.excuse;
         document.querySelector("ul").append(li);
     });
-
-    // const li = document.createElement("li");
-    // li.textContent = customExcuse;
-    // newLi.append(li);
-
+    
+    if (customCategory === category) {
+        const li = document.createElement("li");
+        li.textContent = customExcuse;
+        document.querySelector("ul").append(li);
+    }
 }
 
 function addButtonListeners(excuses) {
@@ -36,8 +39,6 @@ function addButtonListeners(excuses) {
 
     familyButton.addEventListener("click", (e) => {
         addExcusesByCategory(excuses, "family");
-        const element = document.getElementById("family-list");
-        element.classList.toggle("myStyle")
     });
 
     officeButton.addEventListener("click", (e) => {
@@ -60,12 +61,14 @@ function addButtonListeners(excuses) {
     excuseForm.addEventListener("submit", (e) => {
         e.preventDefault();
         
-        const familyOption = document.querySelector("#family-option").textContent;
+        customCategory = document.querySelector("#dropDown").value;
+        console.log("value from dropdown");
+        console.log(customCategory);
     
-        if (familyOption === "Family") {
-            customExcuse = document.getElementById("new-excuse-text").value;
-            console.log(customExcuse);
-        }
+        customExcuse = document.getElementById("new-excuse-text").value;
+        console.log(customExcuse);
+
+        addExcusesByCategory(excuses, customCategory);
         
         e.target.reset();
     })
