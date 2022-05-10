@@ -10,13 +10,33 @@
 </head>
 <body>
     <div>
-        <h1>Test Different Files</h1>
+        <h1>Excuse Categories</h1>
         <button id="family-button">Family Button</button>
         <button id="office-button">Office Button</button>
         <button id="children-button">Children Button</button>
         <button id="college-button">College Button</button>
         <button id="party-button">Party Button</button>
         <ul></ul>
+    </div>
+    <div>
+        <form id=“new-excuse-form”>
+            <label for=“dropDownPriority”>Choose Category:</label>
+            <br>
+            <select name=“Priority” id=“dropDownPriority”>
+                <option value=“family”>Family</option>
+                <option value="office">Office</option>
+                <option value=“children”>Children</option>
+                <option value="college">College</option>
+                <option value="party">Party</option>
+            </select><br>
+            <input id="new-excuse-text" type="text" placeholder="new excuse"></input><br>
+            <button>Submit new excuse</button><br>
+                <!-- <form id=“create-task-form” action = “#” method = “POST”>
+                    <label for=“new-task-description”>Enter Additional Served Documents</label>
+                    <input type=“text” name=“new-task-description” id=“new-task-description”> -->
+                   
+                  </form>
+        </form>    
     </div>
 </body>
 </html>
