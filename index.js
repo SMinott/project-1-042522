@@ -1,26 +1,12 @@
+let customExcuse = null;
+let newLi = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://excuser.herokuapp.com/v1/excuse/300`)
     .then(resp => resp.json())
     .then(excuses => {
         addButtonListeners(excuses);
     });
-
-    const excuseForm = document.querySelector("form");
-    excuseForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        
-        const familyOption = document.querySelector("#family-option").textContent;
-    
-        if (familyOption === "Family") {
-            const li = document.createElement("li");
-            li.textContent = document.getElementById("new-excuse-text").value;
-
-            document.querySelector("#new-excuse").append(li);
-        }
-        e.target.reset();
-
-    })
-
 });
 
 function addExcusesByCategory(excuses, category) {
@@ -32,8 +18,13 @@ function addExcusesByCategory(excuses, category) {
     filteredExcuses.forEach((obj) => {
         const li = document.createElement("li");
         li.textContent = obj.excuse;
-        document.querySelector("ul").append(li); 
+        document.querySelector("ul").append(li);
     });
+
+    // const li = document.createElement("li");
+    // li.textContent = customExcuse;
+    // newLi.append(li);
+
 }
 
 function addButtonListeners(excuses) {
@@ -45,6 +36,8 @@ function addButtonListeners(excuses) {
 
     familyButton.addEventListener("click", (e) => {
         addExcusesByCategory(excuses, "family");
+        const element = document.getElementById("family-list");
+        element.classList.toggle("myStyle")
     });
 
     officeButton.addEventListener("click", (e) => {
@@ -62,6 +55,20 @@ function addButtonListeners(excuses) {
     partyButton.addEventListener("click", (e) => {
         addExcusesByCategory(excuses, "party");
     });
+
+    const excuseForm = document.querySelector("form");
+    excuseForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        const familyOption = document.querySelector("#family-option").textContent;
+    
+        if (familyOption === "Family") {
+            customExcuse = document.getElementById("new-excuse-text").value;
+            console.log(customExcuse);
+        }
+        
+        e.target.reset();
+    })
 }
 
 

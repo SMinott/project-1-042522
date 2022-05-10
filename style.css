@@ -28,3 +28,7 @@ section{
 nav, section{
     display: inline-block;
 }
+
+.myStyle {
+    display: none;
+}
