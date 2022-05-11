@@ -19,14 +19,19 @@ function addExcusesByCategory(excuses, category) {
    
     filteredExcuses.forEach((obj) => {
         const li = document.createElement("li");
-        li.textContent = obj.excuse;
-        document.querySelector("ul").append(li);
-    });
     
+        li.textContent = obj.excuse;
+
+        document.querySelector("ul").append(li);
+    })  
+   
     if (customCategory === category) {
         const li = document.createElement("li");
+
         li.textContent = customExcuse;
+
         document.querySelector("ul").append(li);
+
     }
 }
 
@@ -72,19 +77,16 @@ function addButtonListeners(excuses) {
         
         e.target.reset();
     })
+
+    document.getElementById("random-excuse").addEventListener("mouseover", (e) => {
+        fetch(`https://excuser.herokuapp.com/v1/excuse/`)
+        .then(resp => resp.json())
+        .then(randomExcuse => {
+            randomExcuse.forEach((excuse) => {
+                alert(excuse.excuse);
+            })
+        })
+    })
 }
 
 
-
-
-
-
-// const excuseForm = document.getElementById('submit-excuse');
-// excuseForm.addEventListener('submit', (e) => submitNewExcuse(e));
-// function submitNewExcuse(e){
-//     e.preventDefault();
-//     const li = document.createElement('li');
-//     const newExcuseList = document.getElementById('new-excuse');
-//     newExcuseList.appendChild(li);
-//     li.textContent = e.target.excuse.value;
-// }

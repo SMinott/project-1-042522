@@ -28,3 +28,15 @@ section{
 nav, section{
     display: inline-block;
 }
+
+.icon-down:before {
+    content: "\25BC";
+}
+
+.icon-up:before {
+    content: "\25B2";
+}
+
+ul {
+    list-style-type: none;
+}
