@@ -67,7 +67,6 @@ h2 {
     width: fit-content;
     height: fit-content;
     text-align: center;
-    /* padding: 10% 0; */
     border-radius: 12px;
     position: relative;
     margin-top: 30%;
@@ -81,8 +80,6 @@ h2 {
     border: 15px white;
     color: antiquewhite;
     position: relative;
-    bottom: 8px;
-    right: 16px;
     font-size: 18px;
     float: right;
 }
@@ -118,6 +115,26 @@ h2 {
     bottom: 0;
     left: 0;
     float: left;
+    padding: 14px 40px;
+}
+
+#dropDown {
+    background-color: antiquewhite;
+    font-family: 'Cinzel', serif;
+    height: 40px;
+    width: 222px;
+    border-radius: 12px;
+
+}
+
+#new-excuse-text {
+    background-color: antiquewhite;
+    font-family: 'Cinzel', serif;
+    height: 40px;
+    width: 215px;
+    border-radius: 12px;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 #submit-excuse {
@@ -129,10 +146,6 @@ h2 {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-family: 'Cinzel', serif;
     text-align: center;
-}
-
-nav, section{
-    display: inline-block;
 }
 
 ul {
@@ -150,5 +163,4 @@ ul {
 li {
     margin: 10px 2px;
 }
-
 

@@ -34,16 +34,18 @@
     </div>
     <div id="form-area">
         <form id="new_excuse_form">
-            <label for="dropDownPriority">Choose Category:</label>
+            <label for="dropDownPriority"></label>
             <br>
             <select name="Priority" id="dropDown">
+                <option value="" disabled selected>Select a category</option>
                 <option id="family-option" value="family">Family</option>
                 <option id="office-option" value="office">Office</option>
                 <option id="children-option" value="children">Children</option>
                 <option id="college-option" value="college">College</option>
                 <option id="party-option" value="party">Party</option>
             </select><br>
-            <input id="new-excuse-text" type="text" name="new excuse"></input><br>
+            <input id="new-excuse-text" type="text" name="new excuse"
+            placeholder="enter excuse here"></input><br>
             <button id="submit-excuse">Submit New Excuse</button><br>
         </form>    
     </div>
