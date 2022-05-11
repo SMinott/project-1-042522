@@ -23,7 +23,7 @@ function addExcusesByCategory(excuses, category) {
         li.textContent = obj.excuse;
 
         document.querySelector("ul").append(li);
-    })  
+    });
    
     if (customCategory === category) {
         const li = document.createElement("li");
@@ -31,8 +31,7 @@ function addExcusesByCategory(excuses, category) {
         li.textContent = customExcuse;
 
         document.querySelector("ul").append(li);
-
-    }
+    };
 }
 
 function addButtonListeners(excuses) {
@@ -63,6 +62,7 @@ function addButtonListeners(excuses) {
     });
 
     const excuseForm = document.querySelector("form");
+
     excuseForm.addEventListener("submit", (e) => {
         e.preventDefault();
         
@@ -76,7 +76,7 @@ function addButtonListeners(excuses) {
         addExcusesByCategory(excuses, customCategory);
         
         e.target.reset();
-    })
+    });
 
     document.getElementById("random-excuse").addEventListener("mouseover", (e) => {
         fetch(`https://excuser.herokuapp.com/v1/excuse/`)
@@ -84,9 +84,9 @@ function addButtonListeners(excuses) {
         .then(randomExcuse => {
             randomExcuse.forEach((excuse) => {
                 alert(excuse.excuse);
-            })
-        })
-    })
+            });
+        });
+    });
 }
 
 
