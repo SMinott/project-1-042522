@@ -1,5 +1,6 @@
 body {
     background-image: url("https://www.historytoday.com/sites/default/files/articles/Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg");
+    height: 1000px;
 }
 
 h1 {
@@ -13,14 +14,32 @@ h1 {
     margin-right: auto;
     text-align: center;
     font-style: bold;
-    color: white;
+    color: antiquewhite;
+    font-size: 65px;
+    font-family: 'Cinzel', serif;
+}
+
+h2 {
+    width: 100%;
+    height: 0;
+    padding: 2% 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-style: bold;
+    color: antiquewhite;
+    font-size: 38px;
+    font-family: 'Cinzel', serif;
 }
 
 #category-buttons {
-    /* width: 100%;
+    width: 100%;
     height: 0;
     text-align: center;
-    padding: 5% 0; */
+    padding: 3% 0;
     position: absolute;
     right: 0;
     left: 0;
@@ -35,20 +54,48 @@ h1 {
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     width: 18%;
+    font-family: 'Cinzel', serif;
 }
+
 #category-buttons button:active {
     background-color: rgb(122, 38, 16);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
+#excuses-list {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    /* padding: 10% 0; */
+    border-radius: 12px;
+    position: relative;
+    margin-top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
 #hover-button {
-    border: 1px black solid;
-    /* float: right; */
+    border: 15px white;
+    color: antiquewhite;
+    position: relative;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+    float: right;
 }
 
 #random-excuse {
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
+    background-color: antiquewhite;
+    font-size: 20px;
+    padding: 14px 40px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Cinzel', serif;
 }
 
 #random-excuse:hover {
@@ -66,17 +113,42 @@ h1 {
     flex-direction: column;
 }
 
+#form-area {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    float: left;
+}
 
-#random-excuse {
-    flex-wrap: wrap;
-    flex: 1;
-    flex-direction: row-reverse;
+#submit-excuse {
+    background-color: antiquewhite;
+    font-size: 14px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: 'Cinzel', serif;
+    text-align: center;
 }
 
 nav, section{
     display: inline-block;
 }
 
-form {
-
+ul {
+    background-color: hsl(34, 78%, 91%, .5); 
+    list-style-type: none;
+    font-weight: bold;
+    font: black;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
+
+li {
+    margin: 10px 2px;
+}
+
+
