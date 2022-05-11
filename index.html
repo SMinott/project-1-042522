@@ -9,8 +9,14 @@
     <script type='text/javascript' src='index.js'> </script>
 </head>
 <body>
-    <div>
-        <h1>Excuses</h1>
+    <header>
+        <h1>header here</h1>
+    </header>
+    <div id="hover-button">
+        <span>Hover for a random excuse:</span><br>
+        <button id="random-excuse">Show Random Excuse</button><br>
+    </div>
+    <div id="category-buttons">
         <button id="family-button">Family</button>
         <button id="office-button">Office</button>
         <button id="children-button">Children</button>
@@ -18,7 +24,7 @@
         <button id="party-button">Party</button>
         <ul></ul>
     </div>
-    <div>
+    <div id="form-area">
         <form id="new_excuse_form">
             <label for="dropDownPriority">Choose Category:</label>
             <br>
@@ -30,7 +36,6 @@
                 <option id="party-option" value="party">Party</option>
             </select><br>
             <input id="new-excuse-text" type="text" name="new excuse"></input><br>
-            <button id="random-excuse">Show Random Excuse</button><br>
             <button id="submit-excuse">Submit New Excuse</button><br>
         </form>    
     </div>
