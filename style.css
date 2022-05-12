@@ -1,6 +1,5 @@
 body {
     background-image: url("https://www.historytoday.com/sites/default/files/articles/Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg");
-    height: 1000px;
 }
 
 h1 {
@@ -65,11 +64,11 @@ h2 {
 
 #excuses-list {
     width: fit-content;
-    height: fit-content;
+    height: 500px;
     text-align: center;
     border-radius: 12px;
     position: relative;
-    margin-top: 30%;
+    margin-top: 34%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -85,7 +84,6 @@ h2 {
 }
 
 #random-excuse {
-    transition-duration: 0.5s;
     background-color: antiquewhite;
     font-size: 20px;
     padding: 14px 40px;
@@ -164,3 +162,6 @@ li {
     margin: 10px 2px;
 }
 
+footer {
+    margin-top: 7%;
+}
